@@ -3,146 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name's Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            /* Hide scrolling to create a single-window effect */
-            overflow: hidden;
-        }
-        .section-header {
-            font-size: 1.5rem; /* text-2xl */
-            font-weight: 700; /* font-bold */
-            color: #d1d5db; /* gray-300 */
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .compact-grid {
-            grid-template-rows: 1fr;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-        @media (min-width: 768px) {
-            .compact-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
-    </style>
+    <title>Emin Mirzayev</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-900 text-gray-300 antialiased h-screen flex flex-col">
+<body>
 
-    <!-- Header & Navigation -->
-    <header class="bg-gray-800 py-4 shadow-lg flex-shrink-0">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-bold text-white">Your Name</a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#about" class="text-white hover:text-cyan-400 transition-colors duration-300">About</a></li>
-                    <li><a href="#projects" class="text-white hover:text-cyan-400 transition-colors duration-300">Projects</a></li>
-                    <li><a href="#contact" class="text-white hover:text-cyan-400 transition-colors duration-300">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="navbar">
+        <div class="name-container">
+            <div class="name">Emin Mirzayev</div>
+            <div class="name small">(314) 329-7373 | eminmirzayev@webster.edu | St. Louis, MO</div>
+            </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="#">Home</a>
+            <!--<a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>-->
+        </nav>
+        <a class="download-btn" href="assets/resume.pdf" download aria-label="Download Resume">DOWNLOAD RESUME</a>
+        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect y="4" width="24" height="2" rx="1" fill="currentColor"/>
+                <rect y="11" width="24" height="2" rx="1" fill="currentColor"/>
+                <rect y="18" width="24" height="2" rx="1" fill="currentColor"/>
+            </svg>
+        </button>
     </header>
 
-    <main class="container mx-auto px-4 flex-grow flex flex-col justify-center items-center py-4">
-        <!-- Hero Section - My Name & Intro -->
-        <section class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 w-full">
-            <div class="text-center md:text-left flex-shrink-0">
-                <img src="https://placehold.co/128x128/1f2937/d1d5db?text=Profile" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-gray-700 shadow-xl object-cover mx-auto mb-4">
-                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight mb-2">Hi, I'm <span class="text-cyan-400">Your Name</span>.</h1>
-                <p class="text-sm text-gray-400 max-w-sm">
-                    A passionate developer creating innovative digital solutions.
-                </p>
-            </div>
-            <div class="flex-grow flex flex-col justify-center items-center text-center">
-                <div class="grid md:grid-cols-2 gap-4">
-                    <!-- About Me -->
-                    <div id="about" class="bg-gray-800 p-4 rounded-xl shadow-lg leading-relaxed text-sm">
-                        <h2 class="section-header">About Me</h2>
-                        <p class="mb-2">
-                            My name is Your Name. I'm a developer specializing in intuitive user experiences and robust systems.
-                        </p>
-                        <p>
-                            I have experience with JavaScript, React, Node.js, and Python.
-                        </p>
-                    </div>
+    <div class="container">
 
-                    <!-- Contact Info -->
-                    <div id="contact" class="bg-gray-800 p-4 rounded-xl shadow-lg leading-relaxed text-sm">
-                        <h2 class="section-header">Contact</h2>
-                        <p class="mb-2">
-                            Let's connect!
-                        </p>
-                        <div class="flex justify-center space-x-4">
-                            <a href="mailto:your.email@example.com" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.763s.784-1.763 1.75-1.763 1.75.79 1.75 1.763-.783 1.763-1.75 1.763zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.82-.266.82-.593v-2.09c-3.338.724-4.04-1.61-4.04-1.61-.546-1.387-1.332-1.756-1.332-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.839 1.237 1.839 1.237 1.07 1.836 2.809 1.305 3.493 1.055.108-.822.417-1.305.76-1.605-2.665-.3-5.466-1.33-5.466-5.931 0-1.31.468-2.381 1.236-3.22-.124-.302-.538-1.52.117-3.176 0 0 1.008-.322 3.301 1.233 1.01-.28 2.072-.422 3.13-.427 1.058.005 2.12.147 3.13.427 2.292-1.555 3.3-1.233 3.3-1.233.655 1.656.241 2.874.118 3.176.77.839 1.233 1.91 1.233 3.22 0 4.61-2.806 5.62-5.472 5.92-.416.357-.791 1.053-.791 2.12v3.136c0 .328.219.704.825.592 4.766-1.588 8.204-6.086 8.204-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </a>
-                            <a href="#" download="Your_CV.pdf" class="inline-block bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full text-xs transition-transform transform hover:scale-105">
-                                Download CV
-                            </a>
+        <div class="text-box about">
+            <div class="text-box about">
+                <h3>About Me</h3>
+                <p>As an Industrial Engineer, I have developed a comprehensive understanding of the engineering profession and its application to business operations. I have acquired invaluable problem-solving and project management skills. My educational background has also given me a strong foundation in data analysis, which has been instrumental in my engineering activities. My current objective is to use my engineering experience, interpersonal skills, and problem-solving abilities as an industrial engineer to make a positive contribution.</p>
+            </div>
+        </div>
+        <div class="text-box education">
+            <h3>Education</h3>
+            <div class="edu-hint">Click for more information</div>
+            <div class="edu-grid">
+                <a class="edu-link" href="https://obs.itu.edu.tr/public/DersPlan/DersPlanDetay/869" target="_blank" rel="noopener noreferrer">
+                    <div class="edu-item">
+                        <img src="assets/itu.png" alt="Istanbul Technical University Industrial Engineering">
+                        <div class="edu-meta">
+                            <div class="edu-title">Istanbul Technical University <br> <i>B.Sc., Industrial Engineering</i></div>
+                            <div class="edu-desc">Bachelor's degree in Industrial Engineering</div>
                         </div>
                     </div>
-                </div>
+                </a>
+                <a class="edu-link" href="https://www.webster.edu/catalog/current/graduate-catalog/degrees/business-analytics-ms.html" target="_blank" rel="noopener noreferrer">
+                    <div class="edu-item">
+                        <img src="assets/webster.jpg" alt="Webster University - MS Business Analytics">
+                        <div class="edu-meta">
+                            <div class="edu-title">Webster University <br> <i> M.S., Business Analytics</i></div>
+                            <div class="edu-desc">Master's degree in Business Analytics</div>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </section>
 
-        <!-- Projects Section - Project Shortcuts -->
-        <section class="py-8 flex-grow flex flex-col justify-center items-center w-full" id="projects">
-            <h2 class="section-header">Projects</h2>
-            <div class="grid md:grid-cols-3 gap-4 w-full">
-                <!-- Project Card 1 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/400x225/1f2937/d1d5db?text=Project+1" alt="Project 1" class="w-full h-24 object-cover">
-                    <div class="p-3">
-                        <h3 class="text-sm font-bold text-white mb-1">Project Title One</h3>
-                        <p class="text-gray-400 text-xs mb-2 truncate">A brief description of your project. Mention key technologies.</p>
-                        <a href="#" class="inline-block bg-gray-700 text-cyan-400 font-medium py-1 px-2 rounded-full text-xs hover:bg-gray-600 transition-colors">
-                            View
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/400x225/1f2937/d1d5db?text=Project+2" alt="Project 2" class="w-full h-24 object-cover">
-                    <div class="p-3">
-                        <h3 class="text-sm font-bold text-white mb-1">Project Title Two</h3>
-                        <p class="text-gray-400 text-xs mb-2 truncate">A brief description of your project. Mention key technologies.</p>
-                        <a href="#" class="inline-block bg-gray-700 text-cyan-400 font-medium py-1 px-2 rounded-full text-xs hover:bg-gray-600 transition-colors">
-                            View
-                        </a>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/400x225/1f2937/d1d5db?text=Project+3" alt="Project 3" class="w-full h-24 object-cover">
-                    <div class="p-3">
-                        <h3 class="text-sm font-bold text-white mb-1">Project Title Three</h3>
-                        <p class="text-gray-400 text-xs mb-2 truncate">A brief description of your project. Mention key technologies.</p>
-                        <a href="#" class="inline-block bg-gray-700 text-cyan-400 font-medium py-1 px-2 rounded-full text-xs hover:bg-gray-600 transition-colors">
-                            View
-                        </a>
-                    </div>
-                </div>
+            <h3 style="margin-top:12px;">Completed Courses</h3>
+            <div class="edu-hint">Click for more information</div>
+            <div class="courses-tags" id="coursesTags" data-show="4">
+                <button class="course-tag">Basic Finance for Managers</button>
+                <button class="course-tag">Applied Business Statistics</button>
+                <button class="course-tag">Social and Ethical Issues in Analytics</button>
+                <button class="course-tag">Database Systems for Business Analytics</button>
+                <button class="course-tag">Data Analytics Foundations for Business Analytics</button>
+                <button class="course-tag">ERP Systems and Business Transformation</button>
+                <button class="course-tag">Data Visualization</button>
+                <button class="course-tag">Machine Learning for Business Analytics</button>
+                <button class="course-tag">Marketing Analytics</button>
+                <button class="course-tag">Integrated Business Processes and ERP</button>
+                <button class="course-tag">Descriptive Analytics and ERP Integration Practicum</button>
             </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-4 text-center text-gray-400 text-xs flex-shrink-0">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <!--<button id="coursesToggle" class="show-more">Show more</button>-->
         </div>
-    </footer>
 
+        <div class="work-area">
+            <div class="text-box work">
+                <h3>Work Experience</h3>
+                <div class="edu-hint">Download resume for details</div>
+                <div class="edu-grid">
+                    <a class="edu-link" href="" target="_blank" rel="noopener noreferrer">
+                        <div class="edu-item">
+                            <img src="assets/avat.jpg" alt="Avat Industrial Systems">
+                            <div class="edu-meta">
+                                <div class="edu-title">Avat Industrial Systems <br> <i>Chief Product Officer</i></div>
+                                <div class="edu-desc">1 yr 4 mos</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="edu-link" href="https://www.mega.com.tr/en/about-us/" target="_blank" rel="noopener noreferrer">
+                        <div class="edu-item">
+                            <img src="assets/mega.png" alt="Mega Print">
+                            <div class="edu-meta">
+                                <div class="edu-title">Mega Print <br> <i> Human Resources Assistant (Internship)</i></div>
+                                <div class="edu-desc">3 mos</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-box work">
+                <h3>Licenses & certifications</h3>
+                <div class="edu-hint">Click to see credential</div>
+                <div class="edu-grid">
+                    <a class="edu-link" href="https://openbadgefactory.com/v1/assertion/993f5de9520275d42ed01222c97e9f7d60c2cabb.html" target="_blank" rel="noopener noreferrer">
+                        <div class="edu-item">
+                            <img src="assets/altair.png" alt="Altair">
+                            <div class="edu-meta">
+                                <div class="edu-title">Data Engineering Professional </div>
+                                <div class="edu-desc">Issued Sep 2025</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="edu-link" href="https://openbadgefactory.com/v1/assertion/c0f5aa14b57d8c136870bbb7abf3daedc336ee47.html" target="_blank" rel="noopener noreferrer">
+                        <div class="edu-item">
+                            <img src="assets/altair.png" alt="Altair">
+                            <div class="edu-meta">
+                                <div class="edu-title">Applications & Use Cases Professional (AI Studio)</div>
+                                <div class="edu-desc">Issued Sep 2025</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--<div class="text-box projects">
+            <h3>Most Recent projects</h3>
+            <div class="button-container">
+                <button>Project 1</button>
+                <button>Project 2</button>
+                <button>Project 3</button>
+                <button>Project 4</button>
+            </div>
+        </div>-->
+
+    </div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
